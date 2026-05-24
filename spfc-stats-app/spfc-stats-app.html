@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo FC - Controle de Estatísticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>São Paulo FC</h2>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" data-section="dashboard" class="nav-link active">Dashboard</a></li>
+                    <li><a href="#" data-section="players" class="nav-link">Jogadores</a></li>
+                    <li><a href="#" data-section="competitions" class="nav-link">Competições</a></li>
+                    <li><a href="#" data-section="export" class="nav-link">Exportar/Importar</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <div class="section-header">
+                    <h1>Dashboard - Temporada 2025</h1>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Partidas</h3>
+                        <div class="stat-value" id="totalGames">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Vitórias</h3>
+                        <div class="stat-value" id="totalWins">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Empates</h3>
+                        <div class="stat-value" id="totalDraws">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Derrotas</h3>
+                        <div class="stat-value" id="totalLosses">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Gols Pró</h3>
+                        <div class="stat-value" id="totalGoalsFor">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Gols Contra</h3>
+                        <div class="stat-value" id="totalGoalsAgainst">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Saldo</h3>
+                        <div class="stat-value" id="goalDifference">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Aproveitamento</h3>
+                        <div class="stat-value" id="efficiency">0%</div>
+                    </div>
+                </div>
+
+                <div class="competitions-table">
+                    <h2>Resumo por Competição</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Competição</th>
+                                <th>Jogos</th>
+                                <th>Gols</th>
+                                <th>Assistências</th>
+                                <th>Cartões Amarelos</th>
+                                <th>Cartões Vermelhos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="competitionsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Players Section -->
+            <section id="players" class="content-section">
+                <div class="section-header">
+                    <h1>Jogadores</h1>
+                    <div class="header-actions">
+                        <input type="text" id="playerSearch" placeholder="Buscar jogador..." class="form-control">
+                        <select id="positionFilter" class="form-control">
+                            <option value="">Todas as posições</option>
+                            <option value="Goleiro">Goleiro</option>
+                            <option value="Zagueiro">Zagueiro</option>
+                            <option value="Lateral">Lateral</option>
+                            <option value="Volante">Volante</option>
+                            <option value="Meia">Meia</option>
+                            <option value="Atacante">Atacante</option>
+                        </select>
+                        <button class="btn btn--primary" id="addPlayerBtn">Adicionar Jogador</button>
+                    </div>
+                </div>
+
+                <div class="players-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nº</th>
+                                <th>Nome</th>
+                                <th>Posição</th>
+                                <th>Jogos</th>
+                                <th>Gols</th>
+                                <th>Assistências</th>
+                                <th>Amarelos</th>
+                                <th>Vermelhos</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="playersTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Competitions Section -->
+            <section id="competitions" class="content-section">
+                <div class="section-header">
+                    <h1>Competições</h1>
+                    <button class="btn btn--primary" id="addCompetitionBtn">Nova Competição</button>
+                </div>
+
+                <div class="competitions-grid" id="competitionsGrid">
+                </div>
+            </section>
+
+            <!-- Export/Import Section -->
+            <section id="export" class="content-section">
+                <div class="section-header">
+                    <h1>Exportar/Importar</h1>
+                </div>
+
+                <div class="export-import-actions">
+                    <div class="export-section">
+                        <h2>Exportar Dados</h2>
+                        <div class="export-buttons">
+                            <button class="btn btn--primary" id="exportJsonBtn">Exportar JSON</button>
+                            <button class="btn btn--secondary" id="exportCsvBtn">Exportar CSV</button>
+                        </div>
+                    </div>
+
+                    <div class="import-section">
+                        <h2>Importar Dados</h2>
+                        <div class="import-controls">
+                            <input type="file" id="importFileInput" accept=".json" class="form-control">
+                            <button class="btn btn--primary" id="importBtn">Importar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Player Modal -->
+        <div class="modal" id="playerModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="playerModalTitle">Editar Jogador</h2>
+                    <button class="modal-close" id="playerModalClose">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="playerForm">
+                        <div class="form-group">
+                            <label for="playerName" class="form-label">Nome:</label>
+                            <input type="text" id="playerName" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="playerNumber" class="form-label">Número:</label>
+                            <input type="number" id="playerNumber" name="number" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="playerPosition" class="form-label">Posição:</label>
+                            <select id="playerPosition" name="position" class="form-control" required>
+                                <option value="">Selecione...</option>
+                                <option value="Goleiro">Goleiro</option>
+                                <option value="Zagueiro">Zagueiro</option>
+                                <option value="Lateral">Lateral</option>
+                                <option value="Volante">Volante</option>
+                                <option value="Meia">Meia</option>
+                                <option value="Atacante">Atacante</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="playerPhotoUrl" class="form-label">URL da Foto:</label>
+                            <input type="url" id="playerPhotoUrl" name="photoUrl" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="playerPhotoUpload" class="form-label">Ou fazer upload da foto:</label>
+                            <input type="file" id="playerPhotoUpload" accept="image/*" class="form-control">
+                        </div>
+                        <div class="photo-preview" id="photoPreview"></div>
+                        
+                        <h3>Estatísticas por Competição</h3>
+                        <div id="competitionStats"></div>
+                        
+                        <div class="modal-actions">
+                            <button type="submit" class="btn btn--primary">Salvar</button>
+                            <button type="button" class="btn btn--secondary" id="cancelPlayerEdit">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competition Modal -->
+        <div class="modal" id="competitionModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="competitionModalTitle">Nova Competição</h2>
+                    <button class="modal-close" id="competitionModalClose">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="competitionForm">
+                        <div class="form-group">
+                            <label for="competitionName" class="form-label">Nome:</label>
+                            <input type="text" id="competitionName" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="competitionColor" class="form-label">Cor:</label>
+                            <input type="color" id="competitionColor" name="color" class="form-control" value="#d60021">
+                        </div>
+                        <div class="modal-actions">
+                            <button type="submit" class="btn btn--primary">Salvar</button>
+                            <button type="button" class="btn btn--secondary" id="cancelCompetitionEdit">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
