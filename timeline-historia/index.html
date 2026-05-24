@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Histórica da Humanidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Timeline Histórica da Humanidade</h1>
+            <p class="header__subtitle">Uma jornada pelos principais marcos da história humana</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__controls">
+                <div class="nav__filters">
+                    <button class="btn btn--sm filter-btn active" data-period="all">Todos os Períodos</button>
+                    <button class="btn btn--sm filter-btn" data-period="PRÉ-HISTÓRIA">Pré-História</button>
+                    <button class="btn btn--sm filter-btn" data-period="IDADE ANTIGA">Idade Antiga</button>
+                    <button class="btn btn--sm filter-btn" data-period="IDADE MÉDIA">Idade Média</button>
+                    <button class="btn btn--sm filter-btn" data-period="IDADE MODERNA">Idade Moderna</button>
+                    <button class="btn btn--sm filter-btn" data-period="IDADE CONTEMPORÂNEA">Idade Contemporânea</button>
+                </div>
+                <div class="nav__search">
+                    <input type="text" class="form-control search-input" placeholder="Buscar evento histórico..." id="searchInput">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <div class="timeline" id="timeline">
+                <!-- PRÉ-HISTÓRIA -->
+                <div class="timeline-item" data-period="PRÉ-HISTÓRIA" data-id="1">
+                    <div class="timeline-marker" style="background-color: #8B4513;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-3);">
+                            <span class="timeline-period">PRÉ-HISTÓRIA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">c. 10.000 a.C.</h3>
+                                <h2 class="timeline-title">Revolução Neolítica</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1759611503/pplx_project_search_images/98683b0f6f0776a2bb5605eb22a77e3441fa4dde.png" alt="Período Neolítico - Agricultura e vida pastoral">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">A Revolução Neolítica marcou a transição fundamental da humanidade do nomadismo para o sedentarismo. Durante este período, os seres humanos desenvolveram a agricultura e a domesticação de animais, o que permitiu o estabelecimento de comunidades permanentes.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>Esta transformação levou ao surgimento das primeiras aldeias e cidades, e foi essencial para o crescimento populacional. A agricultura proporcionou maior segurança alimentar e permitiu que as pessoas se especializassem em diferentes atividades, dando origem às primeiras formas de estratificação social.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE ANTIGA - Escrita Cuneiforme -->
+                <div class="timeline-item" data-period="IDADE ANTIGA" data-id="2">
+                    <div class="timeline-marker" style="background-color: #DAA520;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-2);">
+                            <span class="timeline-period">IDADE ANTIGA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">c. 3500 a.C.</h3>
+                                <h2 class="timeline-title">Invenção da Escrita Cuneiforme</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1755735829/pplx_project_search_images/c3fbd3afda36e63356092cc0163a67bb6789c072.png" alt="Tabuleta cuneiforme suméria">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">Os sumérios da Mesopotâmia desenvolveram a primeira forma de escrita conhecida da humanidade. A escrita cuneiforme era feita em tabletas de argila usando instrumentos em forma de cunha.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>Inicialmente pictográfica, evoluiu para representar sons e conceitos abstratos. Esta invenção revolucionou a comunicação, permitindo o registro de leis, transações comerciais, literatura e conhecimento. A escrita marca oficialmente o fim da Pré-História e o início da História registrada.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE ANTIGA - Pirâmides -->
+                <div class="timeline-item" data-period="IDADE ANTIGA" data-id="3">
+                    <div class="timeline-marker" style="background-color: #DAA520;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-2);">
+                            <span class="timeline-period">IDADE ANTIGA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">c. 2600-2500 a.C.</h3>
+                                <h2 class="timeline-title">Construção das Pirâmides do Egito</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1759611571/pplx_project_search_images/3fabda1dd87170886ec946b172282fe290684cc1.png" alt="Pirâmides do Egito">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">As pirâmides de Gizé representam uma das maiores conquistas da engenharia antiga. Construídas como túmulos para os faraós, demonstram o avançado conhecimento matemático e arquitetônico dos egípcios.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>A Grande Pirâmide de Quéops foi considerada uma das Sete Maravilhas do Mundo Antigo e permanece como testemunho da grandiosidade da civilização egípcia. Sua construção envolveu milhares de trabalhadores e técnicas sofisticadas de transporte e posicionamento de blocos de pedra.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE ANTIGA - Democracia Ateniense -->
+                <div class="timeline-item" data-period="IDADE ANTIGA" data-id="4">
+                    <div class="timeline-marker" style="background-color: #DAA520;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-2);">
+                            <span class="timeline-period">IDADE ANTIGA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">século V a.C.</h3>
+                                <h2 class="timeline-title">Democracia Ateniense</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <p class="timeline-description">Atenas desenvolveu o primeiro sistema democrático da história, onde os cidadãos participavam diretamente das decisões políticas. Embora limitada aos homens livres nascidos em Atenas, representou um avanço revolucionário na organização política.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>As reformas de Clístenes estabeleceram a isonomia (igualdade perante a lei), isegoria (direito à palavra) e isocracia (participação igual no poder). Este sistema influenciou profundamente o pensamento político ocidental e serve de base para as democracias modernas.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE ANTIGA - Queda de Roma -->
+                <div class="timeline-item" data-period="IDADE ANTIGA" data-id="5">
+                    <div class="timeline-marker" style="background-color: #DAA520;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-2);">
+                            <span class="timeline-period">IDADE ANTIGA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">476 d.C.</h3>
+                                <h2 class="timeline-title">Queda do Império Romano do Ocidente</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1756209807/pplx_project_search_images/0caa8580e23a0f0582b26cc3b602d32f892bd985.png" alt="Coliseu Romano">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">A deposição do último imperador romano, Rômulo Augusto, por Odoacro marca o fim oficial do Império Romano do Ocidente. Este evento resultou de uma longa crise que incluía pressões bárbaras, instabilidade política, crise econômica e transformações sociais.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>A queda de Roma encerrou mais de mil anos de domínio romano e marcou a transição da Idade Antiga para a Idade Média na periodização histórica tradicional.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE MÉDIA -->
+                <div class="timeline-item" data-period="IDADE MÉDIA" data-id="6">
+                    <div class="timeline-marker" style="background-color: #800080;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-5);">
+                            <span class="timeline-period">IDADE MÉDIA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">séculos V-XV</h3>
+                                <h2 class="timeline-title">Feudalismo Medieval</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1755081531/pplx_project_search_images/06e904c63ce8a32a3b0a474fe5d1f793d9bffa06.png" alt="Castelo medieval e vida feudal">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">O sistema feudal caracterizou a organização social, política e econômica medieval. Baseado na posse da terra e relações pessoais de vassalagem, estabelecia uma hierarquia rígida entre senhores e servos.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>Os castelos medievais simbolizavam o poder dos nobres e serviam como centros administrativos e militares. Este período viu o fortalecimento da Igreja Católica, o desenvolvimento da cavalaria e a construção de magníficas catedrais góticas.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE MODERNA - Renascimento -->
+                <div class="timeline-item" data-period="IDADE MODERNA" data-id="7">
+                    <div class="timeline-marker" style="background-color: #FF8C00;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-6);">
+                            <span class="timeline-period">IDADE MODERNA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">século XV</h3>
+                                <h2 class="timeline-title">Renascimento em Florença</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1759611501/pplx_project_search_images/73d0838813beb8a20f19a645dbb0d6a4b0d4c94b.png" alt="Capela Sistina pintada por Michelangelo">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">Florença tornou-se o berço do Renascimento, movimento cultural que marcou a transição da Idade Média para a Moderna. Sob o mecenato da família Médici, artistas como Leonardo da Vinci, Michelangelo e Botticelli criaram obras-primas que revolucionaram a arte.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>O período caracterizou-se pela valorização do conhecimento clássico, humanismo, avanços científicos e desenvolvimento da perspectiva artística. O Renascimento influenciou profundamente a cultura ocidental.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE MODERNA - Grandes Navegações -->
+                <div class="timeline-item" data-period="IDADE MODERNA" data-id="8">
+                    <div class="timeline-marker" style="background-color: #FF8C00;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-6);">
+                            <span class="timeline-period">IDADE MODERNA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">século XV-XVI</h3>
+                                <h2 class="timeline-title">Grandes Navegações</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1759611574/pplx_project_search_images/d16ab3b6ad7056a1ccae0fb30fec002637450e94.png" alt="Caravelas portuguesas na Era dos Descobrimentos">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">A Era dos Descobrimentos expandiu drasticamente o conhecimento geográfico mundial. As expedições marítimas, lideradas por navegadores como Colombo, Vasco da Gama e Cabral, estabeleceram rotas comerciais e conectaram continentes.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>A descoberta da América em 1492 transformou a história mundial, iniciando o processo de colonização e intercâmbio cultural global. Estas viagens foram possibilitadas por avanços na navegação, cartografia e construção naval.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE CONTEMPORÂNEA - Revolução Francesa -->
+                <div class="timeline-item" data-period="IDADE CONTEMPORÂNEA" data-id="9">
+                    <div class="timeline-marker" style="background-color: #DC143C;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-4);">
+                            <span class="timeline-period">IDADE CONTEMPORÂNEA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">1776</h3>
+                                <h2 class="timeline-title">Independência dos Estados Unidos</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2014/07/independencia-eua-1.jpg?quality=70&strip=info&w=800" alt="Guerra da Inpendência">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">A Guerra de Independência dos Estados Unidos foi um conflito armado entre o Reino da Grã-Bretanha e as Treze Colônias na América do Norte, que haviam declarado sua independência como os Estados Unidos da América.[5] Logo após a Guerra dos Sete Anos, começou a crescer nas colônias britânicas na América um sentimento de descontentamento com a metrópole, baseado em diferenças filosóficas e políticas exacerbadas com o azedamento dos laços entre a Coroa e os povos da colônia.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>A Independência dos Estados Unidos aconteceu em 4 de julho de 1776, quando as Treze Colônias britânicas na América declararam-se livres do domínio da Inglaterra. O conflito começou porque os colonos estavam insatisfeitos com os altos impostos e o controle político britânico, especialmente após leis como o Ato do Chá e o Ato do Selo, que impunham taxas sem que as colônias tivessem representação no Parlamento britânico — daí o famoso lema “No taxation without representation” (“Sem tributação sem representação”). A guerra pela independência durou de 1775 a 1783, terminando com a vitória dos colonos e o Tratado de Paris, que reconheceu oficialmente a independência dos Estados Unidos. Entre os principais líderes estavam George Washington, Thomas Jefferson, Benjamin Franklin e John Adams. A Declaração de Independência, escrita principalmente por Jefferson, tornou-se um símbolo da luta por liberdade e democracia no mundo.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+						<br/>
+						<div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">1789</h3>
+                                <h2 class="timeline-title">Revolução Francesa</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1754693461/pplx_project_search_images/5895ca7be076b684c7b68215d08b22224f2826ad.png" alt="Tomada da Bastilha">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">A Revolução Francesa marcou o fim do Antigo Regime e o início da Idade Contemporânea. Inspirada pelos ideais iluministas de liberdade, igualdade e fraternidade, derrubou a monarquia absolutista e estabeleceu princípios democráticos.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>A Tomada da Bastilha em 14 de julho simbolizou a luta popular contra a tirania. A revolução influenciou movimentos democráticos mundiais e estabeleceu a Declaração dos Direitos do Homem e do Cidadão.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE CONTEMPORÂNEA - Revolução Industrial -->
+                <div class="timeline-item" data-period="IDADE CONTEMPORÂNEA" data-id="10">
+                    <div class="timeline-marker" style="background-color: #DC143C;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-4);">
+                            <span class="timeline-period">IDADE CONTEMPORÂNEA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">século XVIII-XIX</h3>
+                                <h2 class="timeline-title">Revolução Industrial</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1755218644/pplx_project_search_images/f38211d4ef88b23ca2bd77bc0a70ce4202622719.png" alt="Fábrica da Revolução Industrial">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">A Revolução Industrial transformou a sociedade através da mecanização da produção. Iniciada na Inglaterra, introduziu máquinas a vapor, fábricas e produção em massa.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>Esta transformação levou à urbanização, mudanças nas condições de trabalho e o surgimento da classe operária. A industrialização alterou fundamentalmente a economia mundial, aumentou a produtividade e iniciou a era moderna do capitalismo industrial.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE CONTEMPORÂNEA - Primeira Guerra -->
+                <div class="timeline-item" data-period="IDADE CONTEMPORÂNEA" data-id="11">
+                    <div class="timeline-marker" style="background-color: #DC143C;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-4);">
+                            <span class="timeline-period">IDADE CONTEMPORÂNEA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">1914-1918</h3>
+                                <h2 class="timeline-title">Primeira Guerra Mundial</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1759611550/pplx_project_search_images/1a3488fa7f618882e2c89a3ea000ea15fb61b3e6.png" alt="Soldados cavando trincheiras na Primeira Guerra Mundial">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">A Grande Guerra envolveu as principais potências mundiais em um conflito devastador. Caracterizada pela guerra de trincheiras, novas tecnologias militares e perdas massivas, resultou em mais de 10 milhões de mortos.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>O conflito redesenhou o mapa político europeu, levou ao colapso de impérios e estabeleceu as condições para a Segunda Guerra Mundial. A guerra marcou o fim da Belle Époque e o início de uma era de conflitos globais.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE CONTEMPORÂNEA - Segunda Guerra -->
+                <div class="timeline-item" data-period="IDADE CONTEMPORÂNEA" data-id="12">
+                    <div class="timeline-marker" style="background-color: #DC143C;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-4);">
+                            <span class="timeline-period">IDADE CONTEMPORÂNEA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">1939-1945</h3>
+                                <h2 class="timeline-title">Segunda Guerra Mundial</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1759611550/pplx_project_search_images/f73220c9d9e78e1902c4624ec96897eb906af887.png" alt="Explosão atômica em Hiroshima">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">O conflito mais devastador da história humana envolveu mais de 70 países e resultou em 50-80 milhões de mortes. A guerra opôs as potências do Eixo (Alemanha, Itália, Japão) aos Aliados (EUA, Reino Unido, URSS).</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>Marcada por eventos como o Holocausto e o uso de armas atômicas em Hiroshima e Nagasaki, a guerra transformou a ordem mundial e estabeleceu os EUA e URSS como superpotências, preparando o cenário para a Guerra Fria.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDADE CONTEMPORÂNEA - Chegada à Lua -->
+                <div class="timeline-item" data-period="IDADE CONTEMPORÂNEA" data-id="13">
+                    <div class="timeline-marker" style="background-color: #DC143C;"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge" style="background-color: var(--color-bg-4);">
+                            <span class="timeline-period">IDADE CONTEMPORÂNEA</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-date">1969</h3>
+                                <h2 class="timeline-title">Chegada do Homem à Lua</h2>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-image">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1759611571/pplx_project_search_images/9639493032708d8f34817a1eebc2a5140de5e480.png" alt="Astronauta na Lua com bandeira americana">
+                                </div>
+                                <div class="timeline-text">
+                                    <p class="timeline-description">A missão Apollo 11 realizou o sonho da humanidade de pisar em outro corpo celeste. Neil Armstrong e Buzz Aldrin se tornaram os primeiros humanos a caminhar na superfície lunar em 20 de julho de 1969.</p>
+                                    <div class="timeline-expandable hidden">
+                                        <p>Este feito extraordinário demonstrou o potencial da cooperação científica e tecnológica, simbolizando a capacidade humana de superar limites. A conquista lunar inspirou gerações e marcou um ponto alto da exploração espacial durante a Guerra Fria.</p>
+                                    </div>
+                                    <button class="btn btn--sm expand-btn">Ver mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <button class="back-to-top" id="backToTop" title="Voltar ao topo">↑</button>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">Timeline Histórica da Humanidade - Uma jornada pelos principais marcos que moldaram nossa civilização</p>
+                <p class="footer__credit">Explore a história e entenda como chegamos até aqui</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
