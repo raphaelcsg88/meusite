@@ -1,0 +1,40 @@
+id,number,name,position,age,nationality,games,goals,assists,yellow_cards,red_cards
+1,12,Leandro,Goleiro,20,Brasil,0,0,0,0,0
+2,23,Rafael,Goleiro,36,Brasil,12,0,0,2,0
+3,40,João Pedro,Goleiro,19,Brasil,0,0,0,0,0
+4,50,Young,Goleiro,23,Brasil,0,0,0,0,0
+5,93,Jandrei,Goleiro,32,Brasil,0,0,0,0,0
+6,5,Robert Arboleda,Zagueiro,33,Equador,7,1,0,2,0
+7,6,Cédric Soares,Lateral-Direito,33,Portugal,10,0,1,1,0
+8,13,Enzo Díaz,Lateral-Esquerdo,29,Argentina,11,0,1,3,0
+9,18,Wendell,Lateral-Esquerdo,31,Brasil,8,0,0,0,0
+10,28,Alan Franco,Zagueiro,28,Argentina,9,0,0,1,0
+11,32,Nahuel Ferraresi,Zagueiro,26,Venezuela,9,0,0,2,0
+12,34,Igão,Zagueiro,17,Brasil,0,0,0,0,0
+13,35,Sabino,Zagueiro,28,Brasil,6,0,0,1,0
+14,36,Patryck Lanza,Lateral-Esquerdo,22,Brasil,0,0,0,0,0
+15,41,Andrade,Zagueiro,20,Brasil,0,0,0,0,0
+16,42,Maik,Lateral-Direito,20,Brasil,0,0,0,0,0
+17,44,Guilherme Reis,Lateral-Esquerdo,19,Brasil,0,0,0,0,0
+18,8,Oscar,Meia,33,Brasil,3,0,0,1,0
+19,15,Rodriguinho,Meia,21,Brasil,5,0,0,3,0
+20,16,Luiz Gustavo,Volante,37,Brasil,1,0,0,0,0
+21,20,Marcos Antônio,Volante,25,Brasil,8,0,0,0,0
+22,21,Damián Bobadilla,Volante,23,Paraguai,8,0,0,2,0
+23,25,Alisson,Volante,32,Brasil,11,0,1,3,0
+24,29,Pablo Maia,Volante,23,Brasil,5,0,0,2,0
+25,33,Luan,Volante,26,Brasil,0,0,0,0,0
+26,43,Negrucci,Volante,21,Brasil,0,0,0,0,0
+27,46,Hugo Leonardo,Volante,19,Brasil,0,0,0,0,0
+28,47,Matheus Alves,Meia,20,Brasil,8,0,1,0,0
+29,7,Lucas Moura,Atacante,32,Brasil,0,0,0,0,0
+30,9,Jonathan Calleri,Atacante,31,Argentina,3,0,0,0,0
+31,10,Luciano,Atacante,32,Brasil,11,1,0,0,0
+32,11,Ferreirinha,Atacante,27,Brasil,8,3,2,0,0
+33,17,André Silva,Atacante,28,Brasil,11,3,1,0,0
+34,19,Juan Dinenno,Atacante,30,Argentina,0,0,0,0,0
+35,37,Henrique Carmo,Atacante,18,Brasil,0,0,0,0,0
+36,45,Lucca,Atacante,18,Brasil,3,0,0,0,0
+37,48,Lucas Ferreira,Atacante,19,Brasil,12,0,0,0,0
+38,49,Ryan Francisco,Atacante,18,Brasil,7,2,0,0,0
+39,53,Paulinho,Atacante,20,Brasil,0,0,0,0,0

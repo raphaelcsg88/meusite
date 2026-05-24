@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo FC - Controle de Estatísticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="logo-icon">SPFC</div>
+                        <div class="logo-text">
+                            <h1>São Paulo FC</h1>
+                            <p>Controle de Estatísticas</p>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navigation">
+                    <button class="nav-btn active" data-section="dashboard">Dashboard</button>
+                    <button class="nav-btn" data-section="elenco">Elenco</button>
+                    <button class="nav-btn" data-section="estatisticas">Estatísticas</button>
+                    <button class="nav-btn" data-section="partidas">Partidas</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <h2>Dashboard - Temporada 2025</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Posição na Tabela</h3>
+                        <div class="stat-value">14º</div>
+                        <p>Brasileirão 2025</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Jogos</h3>
+                        <div class="stat-value">12</div>
+                        <p>Partidas disputadas</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Vitórias</h3>
+                        <div class="stat-value">2</div>
+                        <p>16,7% de aproveitamento</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Empates</h3>
+                        <div class="stat-value">6</div>
+                        <p>50% das partidas</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Derrotas</h3>
+                        <div class="stat-value">4</div>
+                        <p>33,3% das partidas</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pontos</h3>
+                        <div class="stat-value">12</div>
+                        <p>33,3% de aproveitamento</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="dashboard-left">
+                        <div class="card">
+                            <h3>Artilheiros da Equipe</h3>
+                            <div class="scorers-list">
+                                <div class="scorer-item">
+                                    <span class="player-name">André Silva</span>
+                                    <span class="goals">3 gols</span>
+                                </div>
+                                <div class="scorer-item">
+                                    <span class="player-name">Ferreirinha</span>
+                                    <span class="goals">3 gols</span>
+                                </div>
+                                <div class="scorer-item">
+                                    <span class="player-name">Ryan Francisco</span>
+                                    <span class="goals">2 gols</span>
+                                </div>
+                                <div class="scorer-item">
+                                    <span class="player-name">Luciano</span>
+                                    <span class="goals">1 gol</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-right">
+                        <div class="card">
+                            <h3>Últimos Resultados</h3>
+                            <div class="recent-matches">
+                                <div class="match-item">
+                                    <span class="match-date">01/07</span>
+                                    <span class="match-teams">São Paulo 1 x 3 Vasco</span>
+                                    <span class="match-result loss">D</span>
+                                </div>
+                                <div class="match-item">
+                                    <span class="match-date">24/06</span>
+                                    <span class="match-teams">Bahia 2 x 1 São Paulo</span>
+                                    <span class="match-result loss">D</span>
+                                </div>
+                                <div class="match-item">
+                                    <span class="match-date">17/06</span>
+                                    <span class="match-teams">São Paulo 0 x 2 Mirassol</span>
+                                    <span class="match-result loss">D</span>
+                                </div>
+                                <div class="match-item">
+                                    <span class="match-date">10/06</span>
+                                    <span class="match-teams">São Paulo 2 x 1 Grêmio</span>
+                                    <span class="match-result win">V</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Elenco Section -->
+            <section id="elenco" class="content-section">
+                <div class="section-header">
+                    <h2>Elenco - Temporada 2025</h2>
+                    <button class="btn btn--primary" id="addPlayerBtn">Adicionar Jogador</button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="positionFilter">Posição:</label>
+                        <select id="positionFilter" class="form-control">
+                            <option value="">Todas as posições</option>
+                            <option value="Goleiro">Goleiro</option>
+                            <option value="Zagueiro">Zagueiro</option>
+                            <option value="Lateral-Direito">Lateral-Direito</option>
+                            <option value="Lateral-Esquerdo">Lateral-Esquerdo</option>
+                            <option value="Volante">Volante</option>
+                            <option value="Meia">Meia</option>
+                            <option value="Atacante">Atacante</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="nameSearch">Buscar jogador:</label>
+                        <input type="text" id="nameSearch" class="form-control" placeholder="Nome do jogador">
+                    </div>
+                </div>
+
+                <div class="players-table-container">
+                    <table class="players-table">
+                        <thead>
+                            <tr>
+                                <th>Nº</th>
+                                <th>Nome</th>
+                                <th>Posição</th>
+                                <th>Idade</th>
+                                <th>Nacionalidade</th>
+                                <th>Jogos</th>
+                                <th>Gols</th>
+                                <th>Assistências</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="playersTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Estatísticas Section -->
+            <section id="estatisticas" class="content-section">
+                <h2>Estatísticas Detalhadas</h2>
+                
+                <div class="stats-charts">
+                    <div class="chart-container">
+                        <h3>Artilheiros da Temporada 2025</h3>
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752075630/pplx_code_interpreter/5a2cbd12_sm8bv4.jpg" alt="Artilheiros São Paulo 2025" class="chart-image">
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h3>Distribuição de Jogadores por Posição</h3>
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752075674/pplx_code_interpreter/42574aa9_iwr7rw.jpg" alt="Distribuição por Posição" class="chart-image">
+                    </div>
+                </div>
+
+                <div class="stats-tables">
+                    <div class="card">
+                        <h3>Ranking de Artilheiros</h3>
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Jogador</th>
+                                    <th>Gols</th>
+                                    <th>Jogos</th>
+                                    <th>Média</th>
+                                </tr>
+                            </thead>
+                            <tbody id="scorersTable">
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Ranking de Assistências</h3>
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Jogador</th>
+                                    <th>Assistências</th>
+                                    <th>Jogos</th>
+                                    <th>Média</th>
+                                </tr>
+                            </thead>
+                            <tbody id="assistsTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partidas Section -->
+            <section id="partidas" class="content-section">
+                <div class="section-header">
+                    <h2>Partidas - Temporada 2025</h2>
+                    <button class="btn btn--primary" id="addMatchBtn">Adicionar Partida</button>
+                </div>
+                
+                <div class="matches-container">
+                    <div class="card">
+                        <h3>Histórico de Partidas</h3>
+                        <div class="matches-list" id="matchesList">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal for Player Edit -->
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Editar Jogador</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form id="playerForm">
+                <div class="form-group">
+                    <label for="playerNumber">Número:</label>
+                    <input type="number" id="playerNumber" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerName">Nome:</label>
+                    <input type="text" id="playerName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerPosition">Posição:</label>
+                    <select id="playerPosition" class="form-control" required>
+                        <option value="Goleiro">Goleiro</option>
+                        <option value="Zagueiro">Zagueiro</option>
+                        <option value="Lateral-Direito">Lateral-Direito</option>
+                        <option value="Lateral-Esquerdo">Lateral-Esquerdo</option>
+                        <option value="Volante">Volante</option>
+                        <option value="Meia">Meia</option>
+                        <option value="Atacante">Atacante</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="playerAge">Idade:</label>
+                    <input type="number" id="playerAge" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerNationality">Nacionalidade:</label>
+                    <input type="text" id="playerNationality" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerGames">Jogos:</label>
+                    <input type="number" id="playerGames" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerGoals">Gols:</label>
+                    <input type="number" id="playerGoals" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerAssists">Assistências:</label>
+                    <input type="number" id="playerAssists" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerYellowCards">Cartões Amarelos:</label>
+                    <input type="number" id="playerYellowCards" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="playerRedCards">Cartões Vermelhos:</label>
+                    <input type="number" id="playerRedCards" class="form-control" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn--secondary" id="cancelBtn">Cancelar</button>
+                    <button type="submit" class="btn btn--primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Match Add -->
+    <div id="matchModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adicionar Partida</h3>
+                <button class="modal-close" id="closeMatchModal">&times;</button>
+            </div>
+            <form id="matchForm">
+                <div class="form-group">
+                    <label for="matchDate">Data:</label>
+                    <input type="date" id="matchDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="matchOpponent">Adversário:</label>
+                    <input type="text" id="matchOpponent" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="matchHome">Local:</label>
+                    <select id="matchHome" class="form-control" required>
+                        <option value="true">Casa</option>
+                        <option value="false">Fora</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="matchResult">Resultado:</label>
+                    <input type="text" id="matchResult" class="form-control" placeholder="Ex: 2-1" required>
+                </div>
+                <div class="form-group">
+                    <label for="matchCompetition">Competição:</label>
+                    <input type="text" id="matchCompetition" class="form-control" value="Brasileirão" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn--secondary" id="cancelMatchBtn">Cancelar</button>
+                    <button type="submit" class="btn btn--primary">Adicionar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
